@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>08COFFEE｜秋田から、スペシャルティコーヒーとその先の暮らしを｜コンセプトLP</title>
+<meta name="description" content="秋田・山王のスペシャルティコーヒー専門店08COFFEE。世界の産地から届く高品質な生豆と、喫茶・自家焙煎・通販・コーヒー教室までを一貫して展開する魅力を紹介するコンセプトページです。">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2b1c14">
+<style>
+  :root {
+    --color-primary: #2b1c14;
+    --color-secondary: #fbf7f0;
+    --color-accent: #a8632c;
+    --color-accent-2: #55613f;
+    --color-background: #fbf7f0;
+    --color-surface: #f3ece0;
+    --color-proposal: #eef1e6;
+    --color-text: #2b1c14;
+    --color-muted: #6b5d4f;
+    --color-border: #ddceb9;
+    --space-1: 8px;
+    --space-2: 16px;
+    --space-3: 24px;
+    --space-4: 32px;
+    --space-5: 48px;
+    --space-6: 64px;
+    --space-7: 96px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    background-image:
+      radial-gradient(ellipse 5px 7px at 20px 24px, rgba(168,99,44,0.075) 45%, transparent 46%),
+      radial-gradient(ellipse 5px 7px at 54px 58px, rgba(85,97,63,0.065) 45%, transparent 46%),
+      radial-gradient(ellipse 5px 7px at 88px 16px, rgba(168,99,44,0.05) 45%, transparent 46%);
+    background-size: 108px 108px;
+    color: var(--color-text);
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+    font-size: clamp(16px, 1.5vw, 17px);
+    line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--color-accent); }
+
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+    outline: 3px solid var(--color-accent-2);
+    outline-offset: 2px;
+  }
+
+  .skip-link {
+    position: absolute; left: -999px; top: 0;
+    background: var(--color-primary); color: #fff;
+    padding: var(--space-2) var(--space-3);
+    z-index: 100; border-radius: 0 0 8px 0;
+  }
+  .skip-link:focus { left: 0; }
+
+  .wrap {
+    max-width: 960px; margin: 0 auto;
+    padding-left: max(14px, env(safe-area-inset-left));
+    padding-right: max(14px, env(safe-area-inset-right));
+  }
+
+  section { padding-top: var(--space-6); padding-bottom: var(--space-6); }
+
+  h1, h2, h3 {
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "游明朝", serif;
+    color: var(--color-primary); line-height: 1.5; font-weight: 600;
+    margin: 0 0 var(--space-3);
+  }
+  h2 { font-size: clamp(22px, 4vw, 30px); }
+  h3 { font-size: clamp(18px, 3vw, 21px); }
+  p { margin: 0 0 var(--space-2); overflow-wrap: anywhere; }
+
+  .eyebrow {
+    display: inline-block; font-size: 13px; letter-spacing: 0.12em;
+    color: var(--color-accent-2); border: 1px solid var(--color-accent-2);
+    border-radius: 999px; padding: 4px 14px; margin-bottom: var(--space-2);
+  }
+
+  .section-lead { color: var(--color-muted); max-width: 640px; }
+
+  .card {
+    background: var(--color-surface); border-radius: 14px; padding: var(--space-4);
+    box-shadow: 0 6px 18px rgba(43,28,20,0.06);
+  }
+
+  .grid { display: grid; gap: var(--space-3); grid-template-columns: 1fr; }
+  @media (min-width: 640px) {
+    .grid-2 { grid-template-columns: repeat(2, 1fr); }
+    .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  }
+  .grid > * { min-width: 0; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 44px; padding: 12px 22px; border-radius: 999px;
+    text-decoration: none; font-weight: 600; border: 2px solid var(--color-accent);
+    width: 100%;
+  }
+  @media (min-width: 480px) { .btn { width: auto; } }
+  .btn-primary { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
+  .btn-secondary { background: transparent; color: var(--color-accent); }
+  .btn-quiet { border-color: var(--color-border); color: var(--color-primary); background: #fff; }
+  .btn-on-photo { border-color: #fff; color: #fff; background: rgba(43,28,20,0.35); }
+
+  .cta-row { display: flex; flex-direction: column; gap: var(--space-2); }
+  @media (min-width: 480px) { .cta-row { flex-direction: row; flex-wrap: wrap; } }
+
+  /* ---- Media ---- */
+  .media { border-radius: 14px; overflow: hidden; box-shadow: 0 6px 18px rgba(43,28,20,0.10); margin-bottom: var(--space-2); }
+  .media img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 4 / 3; transform: scale(1.04); }
+  .media.wide img { aspect-ratio: 16 / 9; }
+
+  /* ---- AI画像に関する注記バー ---- */
+  .ai-image-notice {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    padding: 14px 0;
+    font-size: 13.5px;
+    color: var(--color-muted);
+    text-align: center;
+  }
+
+  /* ---- First view ---- */
+  .hero {
+    position: relative; min-height: 92svh; display: flex; align-items: flex-end;
+    overflow: hidden; border-bottom: 1px solid var(--color-border);
+  }
+  .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+  .hero-overlay {
+    position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(180deg, rgba(43,28,20,0.20) 0%, rgba(43,28,20,0.82) 92%);
+  }
+  .hero-inner { position: relative; z-index: 2; max-width: 640px; padding-bottom: var(--space-6); padding-top: var(--space-6); }
+  .hero .eyebrow-group { display: flex; flex-wrap: wrap; gap: var(--space-1); margin-bottom: var(--space-3); }
+  .proposal-tag {
+    display: inline-block; font-size: 12.5px; letter-spacing: 0.06em;
+    background: var(--color-accent); color: #fff; padding: 5px 12px; border-radius: 6px;
+  }
+  .hero h1 { color: #fff; font-size: clamp(28px, 6.5vw, 44px); margin-bottom: var(--space-2); }
+  .hero .catch { font-size: clamp(16px, 3vw, 18px); color: rgba(255,255,255,0.9); margin-bottom: var(--space-4); }
+
+  /* ---- Strengths ---- */
+  .strength-card { display: flex; flex-direction: column; }
+  .strength-card .num {
+    display: inline-block; font-family: "Yu Mincho", "Hiragino Mincho ProN", "游明朝", serif;
+    font-size: 14px; color: var(--color-accent); letter-spacing: 0.1em; margin-bottom: var(--space-1);
+  }
+  .strength-card .value {
+    margin-top: auto; padding-top: var(--space-2);
+    border-top: 1px dashed var(--color-border); color: var(--color-muted); font-size: 15px;
+  }
+
+  /* ---- Story ---- */
+  .story-section { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
+  .story-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+  @media (min-width: 700px) { .story-grid { grid-template-columns: 280px 1fr; align-items: start; } }
+  .story-media { position: relative; }
+  .story-media .media { margin-bottom: 0; }
+  .story-badge {
+    position: absolute; left: 12px; bottom: 12px;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", "游明朝", serif;
+    font-size: 34px; line-height: 1; color: #fff;
+    background: var(--color-accent-2);
+    width: 56px; height: 56px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  /* ---- Osusume (featured product, text-forward) ---- */
+  .osusume { background: var(--color-primary); color: #fbf7f0; border-radius: 18px; padding: var(--space-5) var(--space-4); }
+  .osusume h2, .osusume h3 { color: #fbf7f0; }
+  .osusume .badge {
+    display: inline-block; background: var(--color-accent); color: #fff; font-size: 13px;
+    letter-spacing: 0.08em; padding: 5px 12px; border-radius: 6px; margin-bottom: var(--space-2);
+  }
+  .osusume .price { font-size: clamp(20px, 4vw, 26px); font-weight: 700; margin: var(--space-2) 0; }
+  .osusume ul { margin: 0 0 var(--space-3); padding-left: 1.2em; color: #ece3d3; }
+  .osusume ul li { margin-bottom: 6px; }
+
+  /* ---- Services (統合版：サービス＋過ごし方) ---- */
+  .service-card { display: flex; flex-direction: column; }
+  .service-card h3 { margin-bottom: 6px; }
+  .service-card .tag {
+    display: inline-block; font-size: 12px; color: var(--color-accent-2);
+    border: 1px solid var(--color-accent-2); border-radius: 6px; padding: 2px 8px; margin-bottom: var(--space-2);
+  }
+  .service-card .cta-row { margin-top: auto; padding-top: var(--space-2); }
+
+  /* ---- 診断アプリ誘導CTA ---- */
+  .proto-cta {
+    background: var(--color-proposal);
+    border: 1px solid var(--color-accent-2);
+    border-radius: 16px;
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    align-items: flex-start;
+  }
+  .proto-cta h2 { margin-bottom: var(--space-1); }
+  .proto-cta .section-lead { margin-bottom: 4px; }
+  .proto-cta .proto-cta-note { color: var(--color-accent-2); font-size: 14.5px; margin: 0; }
+  .proto-cta .btn { flex: none; }
+  @media (min-width: 640px) {
+    .proto-cta {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      padding: var(--space-4) var(--space-5);
+    }
+    .proto-cta-text { flex: 1; }
+  }
+
+  /* ---- Store info ---- */
+  .info-table { width: 100%; border-collapse: collapse; }
+  .info-table th, .info-table td { text-align: left; padding: 10px 0; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  .info-table th { width: 8.5em; color: var(--color-muted); font-weight: 600; font-size: 14.5px; }
+
+  /* ---- Footer ---- */
+  footer { padding: var(--space-5) 0 var(--space-6); border-top: 1px solid var(--color-border); color: var(--color-muted); font-size: 14px; }
+  footer .foot-links { margin-top: var(--space-2); }
+  footer a { color: var(--color-accent-2); }
+
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">本文へスキップ</a>
+
+<!-- ===================== ファーストビュー ===================== -->
+<section class="hero">
+  <img class="hero-bg" src="images/hero.jpg" alt="" fetchpriority="high">
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow-group">
+      <span class="proposal-tag">CONCEPT LP／店舗向け提案用ページ</span>
+    </div>
+    <h1>08COFFEE</h1>
+    <p class="catch">秋田から、豊かな一杯を。</p>
+    <p class="catch">世界の産地から届く豆を、自家焙煎で丁寧に届けるスペシャルティコーヒー専門店。</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#strength">08COFFEEの魅力を見る</a>
+      <a class="btn btn-on-photo" href="#proto">コーヒー豆診断について見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 画像についての注記 ===================== -->
+<div class="ai-image-notice">
+  <div class="wrap">掲載画像は、08COFFEEの店舗イメージを表現したAI生成画像です。実際の外観・内装・商品パッケージとは異なります。</div>
+</div>
+
+<main id="main-content">
+
+  <!-- ===================== コンセプト ===================== -->
+  <section id="concept">
+    <div class="wrap grid grid-2" style="align-items:center;">
+      <div>
+        <span class="eyebrow">CONCEPT</span>
+        <h2>一杯のコーヒーと、その空間すべてを</h2>
+        <p class="section-lead">
+          08COFFEEは、コーヒーを淹れて飲むことだけでなく、そこにある道具やカップ、椅子やソファ、流れる音楽、一緒に読む本まで、空間全体で一杯のコーヒーを楽しんでもらうことを大切にしています。時代が変わっても、一杯のコーヒーが日々の活力になることは変わらないという想いのもと、今日もコーヒーと向き合っています。
+        </p>
+      </div>
+      <div>
+        <div class="media"><img src="images/interior_warm.jpg" alt="木の温もりを感じる店内の雰囲気（イメージ画像）" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 企業・店舗の強み ===================== -->
+  <section id="strength">
+    <div class="wrap">
+      <span class="eyebrow">STRENGTH</span>
+      <h2>公式情報から見える、08COFFEEの強み</h2>
+      <p class="section-lead">公式に確認できる情報をもとに整理した、この店舗ならではの3つの特徴です。</p>
+      <div class="grid grid-3">
+        <div class="card strength-card">
+          <div class="media"><img src="images/coffee_beans.jpg" alt="焙煎されたコーヒー豆（イメージ画像）" loading="lazy"></div>
+          <span class="num">01</span>
+          <h3>世界の産地とつながる仕入れ</h3>
+          <p>世界各地の優良農園・優良地域から届くスペシャルティコーヒーを、生産者ネットワークを通じて安定的に仕入れています。</p>
+          <p class="value">お客様にとっての価値：産地ごとの個性を持つ高品質な豆に、いつでも出会えます。</p>
+        </div>
+        <div class="card strength-card">
+          <div class="media"><img src="images/hand_drip_closeup.jpg" alt="ハンドドリップでコーヒーを淹れる様子（イメージ画像）" loading="lazy"></div>
+          <span class="num">02</span>
+          <h3>毎朝丁寧に焙煎するこだわり</h3>
+          <p>収穫から1年以内の新豆のみを使い、毎朝焙煎を行うことで、フレッシュな状態のコーヒーを店頭に並べています。</p>
+          <p class="value">お客様にとっての価値：淹れたての一杯にも、持ち帰る豆にも、鮮度への安心感があります。</p>
+        </div>
+        <div class="card strength-card">
+          <div class="media"><img src="images/interior_counter.jpg" alt="店内カウンターの様子（イメージ画像）" loading="lazy"></div>
+          <span class="num">03</span>
+          <h3>喫茶から通販・教室までの一貫展開</h3>
+          <p>喫茶、自家焙煎豆の販売、卸売、ギフト、通販、コーヒー教室（Coffee Labo）までを一貫して手がけています。</p>
+          <p class="value">お客様にとっての価値：店で味わう、持ち帰る、贈る、学ぶという複数の関わり方を選べます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 創業者ストーリー ===================== -->
+  <section id="story" class="story-section">
+    <div class="wrap">
+      <span class="eyebrow">STORY</span>
+      <h2>店主・児玉和也のストーリー</h2>
+      <div class="story-grid">
+        <div class="story-media">
+          <div class="media"><img src="images/barista_drip.jpg" alt="ハンドドリップで一杯を淹れる様子（イメージ画像）" loading="lazy"></div>
+          <span class="story-badge" aria-hidden="true">08</span>
+        </div>
+        <div>
+          <p>店主の児玉和也氏は、もともとラグビー選手として秋田工業高校で主将を務め、秋田ノーザンブレッツにも所属していました。26歳での引退後、家族と仙台へ移住し、飲食店で3年間修業を積みます。</p>
+          <p>その中で、料理よりもコーヒーそのものに強く魅力を感じたことがきっかけとなり、2011年7月に08COFFEEを開業しました。</p>
+          <p>店名の「08」は、ラグビー時代に背負っていたポジション・背番号「ナンバーエイト」に由来しています。競技で培った芯の強さが、いまも一杯ずつ丁寧にコーヒーと向き合う姿勢につながっています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== コーヒー豆診断（外部アプリ誘導CTA） ===================== -->
+  <section id="proto">
+    <div class="wrap">
+      <div class="proto-cta">
+        <div class="proto-cta-text">
+          <h2>あなたに合うコーヒー豆を診断</h2>
+          <p class="section-lead">いくつかの質問に答えるだけで、好みに合ったコーヒー豆をご提案します。</p>
+          <p class="proto-cta-note">所要時間は約1分。気軽にお試しいただけます。</p>
+        </div>
+        <a class="btn btn-primary" href="https://coffee-diagnosis-app.netlify.app/" target="_blank" rel="noopener noreferrer">コーヒー豆診断を試す</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 一押し商品 ===================== -->
+  <section id="osusume">
+    <div class="wrap">
+      <span class="eyebrow">OSUSUME</span>
+      <h2>特に注目したい商品</h2>
+      <p class="section-lead">公式オンラインショップで「人気No.1」と紹介されている、08COFFEEを代表する一本です。</p>
+      <div class="osusume">
+        <span class="badge">人気No.1</span>
+        <h3>カフェオレベース 500ml</h3>
+        <p class="price">¥1,650（税込・オンラインショップ表示価格）</p>
+        <p>スペシャルティコーヒー100%とてんさい糖のみを使う、無着色・無添加の甘さ控えめなカフェオレベースです。カフェオレに合うよう特別にブレンドした5種類の豆を深煎りにし、京都の少人数の職人が一本ずつ瓶詰めしています。</p>
+        <ul>
+          <li>牛乳で3〜4倍に薄めると、ほんのり甘いカフェオレに</li>
+          <li>アイスでもホットでも楽しめる</li>
+          <li>バニラアイスやコーヒーゼリーなどのアレンジにも活用できる</li>
+        </ul>
+        <p>どのような人・場面に向いているか：コーヒーの味わいを残しつつ、まろやかな甘さでミルクと合わせて楽しみたい方や、大人から子どもまで一緒に楽しめる一本を探している方に向いています。</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://08coffee.thebase.in/items/4507426" target="_blank" rel="noopener noreferrer">オンラインショップでカフェオレベースを見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 商品・サービス（喫茶／物販／教室：過ごし方を統合） ===================== -->
+  <section id="services">
+    <div class="wrap">
+      <span class="eyebrow">SERVICE</span>
+      <h2>喫茶・販売・教室、それぞれの楽しみ方</h2>
+      <p class="section-lead">店内で味わう、自宅へ持ち帰る、知識を深める。暮らしに合わせたコーヒーの楽しみ方を提案しています。</p>
+      <div class="grid grid-3">
+        <div class="card service-card">
+          <div class="media"><img src="images/latte_art.jpg" alt="ラテアートが施されたドリンク（イメージ画像）" loading="lazy"></div>
+          <span class="tag">喫茶</span>
+          <h3>店内でゆっくり過ごす</h3>
+          <p>カウンターを含め全14席の喫茶スペースで、一杯ずつ丁寧に淹れるコーヒーとスイーツ、ゆっくりと流れる時間を楽しめます。</p>
+          <div class="cta-row">
+            <a class="btn btn-quiet" href="https://08coffee.jp/tearoom/" target="_blank" rel="noopener noreferrer">喫茶スペースの詳細を見る</a>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="media"><img src="images/coffee_bag.jpg" alt="コーヒー豆のパッケージ（イメージ画像）" loading="lazy"></div>
+          <span class="tag">物販</span>
+          <h3>豆を選んで持ち帰る</h3>
+          <p>その日に焙煎したコーヒー豆に加え、コーヒーギフトやコーヒーツールも取り扱う「豆と暮らしの販売所」です。自宅でも08COFFEEの味わいを楽しめます。</p>
+          <div class="cta-row">
+            <a class="btn btn-quiet" href="https://08coffee.jp/beans-life/" target="_blank" rel="noopener noreferrer">豆と暮らしの販売所を見る</a>
+          </div>
+        </div>
+        <div class="card service-card">
+          <div class="media"><img src="images/espresso.jpg" alt="抽出されるエスプレッソ（イメージ画像）" loading="lazy"></div>
+          <span class="tag">教室</span>
+          <h3>コーヒーを学ぶ</h3>
+          <p>店主が少人数制で行う初心者向けのコーヒー教室「Coffee Labo」。淹れ方のレッスンと、複数のコーヒーの飲み比べを体験できます。</p>
+          <div class="cta-row">
+            <a class="btn btn-quiet" href="https://08coffee.jp/coffee-labo/" target="_blank" rel="noopener noreferrer">Coffee Laboの詳細を見る</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 店舗情報 ===================== -->
+  <section id="shopinfo">
+    <div class="wrap">
+      <span class="eyebrow">SHOP INFO</span>
+      <h2>店舗情報</h2>
+
+      <div class="media wide"><img src="images/exterior.jpg" alt="店舗外観のイメージ（イメージ画像）" loading="lazy"></div>
+
+      <table class="info-table">
+        <tbody>
+          <tr><th scope="row">店舗名</th><td>08COFFEE</td></tr>
+          <tr><th scope="row">住所</th><td>〒010-0952　秋田県秋田市山王新町13-21　三栄ビル2F</td></tr>
+          <tr><th scope="row">電話／FAX</th><td><a href="tel:0188933330">018-893-3330</a></td></tr>
+          <tr><th scope="row">メール</th><td><a href="mailto:info@08coffee.jp">info@08coffee.jp</a></td></tr>
+          <tr><th scope="row">営業時間</th><td>平日 10:00〜19:00／土日祝 8:00〜17:00（ラストオーダーは閉店30分前）</td></tr>
+          <tr><th scope="row">定休日</th><td>水曜日</td></tr>
+          <tr><th scope="row">駐車場</th><td>第一駐車場（店舗1F）・第二駐車場（30m先）</td></tr>
+          <tr><th scope="row">公式HP</th><td><a href="https://08coffee.jp/" target="_blank" rel="noopener noreferrer">https://08coffee.jp/</a></td></tr>
+          <tr><th scope="row">Instagram</th><td><a href="https://www.instagram.com/08coffee/" target="_blank" rel="noopener noreferrer">@08coffee</a></td></tr>
+          <tr><th scope="row">オンラインショップ</th><td><a href="https://08coffee.thebase.in/" target="_blank" rel="noopener noreferrer">08COFFEE powered by BASE</a></td></tr>
+        </tbody>
+      </table>
+      <p class="section-lead" style="margin-top: var(--space-2);">最新情報は店舗の公式案内をご確認ください。</p>
+
+      <div class="cta-row" style="margin-top: var(--space-3);">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=%E7%A7%8B%E7%94%B0%E7%9C%8C%E7%A7%8B%E7%94%B0%E5%B8%82%E5%B1%B1%E7%8E%8B%E6%96%B0%E7%94%BA13-21%E4%B8%89%E6%A0%84%E3%83%93%E3%83%AB2F" target="_blank" rel="noopener noreferrer">地図を見る</a>
+        <a class="btn btn-secondary" href="https://08coffee.jp/" target="_blank" rel="noopener noreferrer">公式サイトを見る</a>
+        <a class="btn btn-secondary" href="https://www.instagram.com/08coffee/" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== フッター ===================== -->
+<footer>
+  <div class="wrap">
+    <p>08COFFEE</p>
+    <p>© 08COFFEE. All Rights Reserved.</p>
+    <p class="foot-links"><a href="https://08coffee.jp/" target="_blank" rel="noopener noreferrer">08COFFEE公式サイトへ</a></p>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "08COFFEE",
+  "url": "https://08coffee.jp/",
+  "telephone": "018-893-3330",
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": "010-0952",
+    "addressRegion": "秋田県",
+    "addressLocality": "秋田市",
+    "streetAddress": "山王新町13-21 三栄ビル2F"
+  },
+  "sameAs": [
+    "https://www.instagram.com/08coffee/",
+    "https://www.facebook.com/08coffee/"
+  ]
+}
+</script>
+
+</body>
+</html>
