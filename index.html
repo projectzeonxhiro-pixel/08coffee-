@@ -12,6 +12,7 @@
     --color-primary: #2b1c14;
     --color-secondary: #fbf7f0;
     --color-accent: #a8632c;
+    --color-accent-text: #965827;  /* 明るい地の上に置く文字用 */
     --color-accent-2: #55613f;
     --color-background: #fbf7f0;
     --color-surface: #f3ece0;
@@ -47,7 +48,7 @@
   }
 
   img { max-width: 100%; height: auto; display: block; }
-  a { color: var(--color-accent); }
+  a { color: var(--color-accent-text); }
 
   a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
     outline: 3px solid var(--color-accent-2);
@@ -107,7 +108,7 @@
   }
   @media (min-width: 480px) { .btn { width: auto; } }
   .btn-primary { background: var(--color-accent); color: #fff; border-color: var(--color-accent); }
-  .btn-secondary { background: transparent; color: var(--color-accent); }
+  .btn-secondary { background: transparent; color: var(--color-accent-text); }
   .btn-quiet { border-color: var(--color-border); color: var(--color-primary); background: #fff; }
   .btn-on-photo { border-color: #fff; color: #fff; background: rgba(43,28,20,0.35); }
 
@@ -151,14 +152,35 @@
 
   /* ---- Strengths ---- */
   .strength-card { display: flex; flex-direction: column; }
+  .strength-card h3 { line-height: 1.5; }
+  @media (min-width: 640px) {
+    .strength-card h3 { min-height: 3em; }
+    .strength-card .value { min-height: 4.6em; }
+  }
   .strength-card .num {
     display: inline-block; font-family: "Yu Mincho", "Hiragino Mincho ProN", "游明朝", serif;
-    font-size: 14px; color: var(--color-accent); letter-spacing: 0.1em; margin-bottom: var(--space-1);
+    font-size: 14px; color: var(--color-accent-text); letter-spacing: 0.1em; margin-bottom: var(--space-1);
   }
   .strength-card .value {
     margin-top: auto; padding-top: var(--space-2);
     border-top: 1px dashed var(--color-border); color: var(--color-muted); font-size: 15px;
   }
+
+  /* ---- 豆の選び方 ---- */
+  .bean-card { display: flex; flex-direction: column; }
+  .bean-axis {
+    display: inline-block; align-self: flex-start;
+    font-size: 13px; letter-spacing: 0.08em; font-weight: 700;
+    color: var(--color-accent-text); border: 1px solid var(--color-border);
+    border-radius: 999px; padding: 3px 12px; margin-bottom: var(--space-2);
+  }
+  .bean-card h3 { margin-bottom: var(--space-1); }
+  .bean-eg {
+    margin-top: var(--space-3); padding-top: var(--space-2);
+    border-top: 1px dashed var(--color-border);
+    color: var(--color-muted); font-size: 14px; line-height: 1.8;
+  }
+  .bean-note { color: var(--color-muted); font-size: 13px; margin-top: var(--space-2); }
 
   /* ---- Story ---- */
   .story-section { background: var(--color-surface); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); }
@@ -282,7 +304,7 @@
   <section id="strength">
     <div class="wrap">
       <span class="eyebrow">STRENGTH</span>
-      <h2>公式情報から見える、08COFFEEの強み</h2>
+      <h2>08COFFEEの三つの強み</h2>
       <p class="section-lead">公式に確認できる情報をもとに整理した、この店舗ならではの3つの特徴です。</p>
       <div class="grid grid-3">
         <div class="card strength-card">
@@ -329,6 +351,45 @@
     </div>
   </section>
 
+  <!-- ===================== 豆の選び方 ===================== -->
+  <section id="beans">
+    <div class="wrap">
+      <span class="eyebrow">HOW TO CHOOSE</span>
+      <h2>豆は、焙煎と味わいの二つで選べます</h2>
+      <p class="section-lead">
+        08COFFEEのオンラインショップでは、豆が<strong>焙煎の深さ</strong>と<strong>味わいの系統</strong>という
+        二つの見方で並べられています。産地名を知らなくても、この二つだけで自分の一杯にたどり着けます。
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card bean-card">
+          <span class="bean-axis">酸味系</span>
+          <h3>浅煎り</h3>
+          <p>果物のような明るい香りが立つ系統です。</p>
+          <p class="bean-eg">BLEND No.7 ／ はつ恋 イルガチェフェ ／ エチオピア グジ ハンベラ</p>
+        </div>
+        <div class="card bean-card">
+          <span class="bean-axis">バランス系</span>
+          <h3>中煎り・中深煎り</h3>
+          <p>酸味と苦みのどちらにも寄りすぎない系統です。</p>
+          <p class="bean-eg">BLEND No.8 ／ 僕のケニア ／ ケニア カサクワ ／ グァテマラ サンタカタリーナ ／ ペルー フェスパ農園 ／ メキシコ チアパス（カフェインレス）</p>
+        </div>
+        <div class="card bean-card">
+          <span class="bean-axis">苦み系</span>
+          <h3>深煎り</h3>
+          <p>香ばしさとコクが前に出る系統です。</p>
+          <p class="bean-eg">季節のブレンド MOON ／ BLEND No.9 ／ ショコラ！ショコラ！ ／ インドネシア マンデリン ほか</p>
+        </div>
+      </div>
+
+      <p class="section-lead" style="margin-top:var(--space-3)">
+        同じ豆を<strong>焙煎違いで出しているもの</strong>もあります。グァテマラ・ケニア・ペルーは、中煎りと深煎りの両方。
+        <strong>同じ産地で味わいがどう変わるかを、飲み比べられます。</strong>
+      </p>
+      <p class="bean-note">※ 銘柄と分類は公式オンラインショップの掲載（2026年9月15日確認）にもとづきます。入荷により入れ替わります。</p>
+    </div>
+  </section>
+
   <!-- ===================== コーヒー豆診断（外部アプリ誘導CTA） ===================== -->
   <section id="proto">
     <div class="wrap">
@@ -337,8 +398,9 @@
           <h2>あなたに合うコーヒー豆を診断</h2>
           <p class="section-lead">いくつかの質問に答えるだけで、好みに合ったコーヒー豆をご提案します。</p>
           <p class="proto-cta-note">所要時間は約1分。気軽にお試しいただけます。</p>
+          <p class="proto-cta-note">※ 店舗運営者向けの試作デモです。現在提供中の正式サービスではありません。別ウィンドウで開きます。入力内容の保存・送信は行いません。</p>
         </div>
-        <a class="btn btn-primary" href="https://coffee-diagnosis-app.netlify.app/" target="_blank" rel="noopener noreferrer">コーヒー豆診断を試す</a>
+        <a class="btn btn-primary" href="https://coffee-diagnosis-app.netlify.app/index.html" target="_blank" rel="noopener noreferrer">コーヒー豆診断を試す</a>
       </div>
     </div>
   </section>
@@ -347,10 +409,10 @@
   <section id="osusume">
     <div class="wrap">
       <span class="eyebrow">OSUSUME</span>
-      <h2>特に注目したい商品</h2>
+      <h2>一押しの商品</h2>
       <p class="section-lead">公式オンラインショップで「人気No.1」と紹介されている、08COFFEEを代表する一本です。</p>
       <div class="osusume">
-        <span class="badge">人気No.1</span>
+        <span class="badge">公式「人気No.1」</span>
         <h3>カフェオレベース 500ml</h3>
         <p class="price">¥1,650（税込・オンラインショップ表示価格）</p>
         <p>スペシャルティコーヒー100%とてんさい糖のみを使う、無着色・無添加の甘さ控えめなカフェオレベースです。カフェオレに合うよう特別にブレンドした5種類の豆を深煎りにし、京都の少人数の職人が一本ずつ瓶詰めしています。</p>
